@@ -1,4 +1,4 @@
-const API = "https://your-backend.onrender.com/api/tasks";
+const API = "http://localhost:5500/api/tasks";
 
 /* ── STATE ─────────────────────────────────────────── */
 let allTasks = [];
@@ -113,7 +113,7 @@ function renderTasks() {
       </div>
       <div class="task-actions">
         <button class="icon-btn" title="Edit" data-edit="${t._id}">✏️</button>
-        <button class="icon-btn del" title="Delete" data-delete="${t._id}">🗑️</button>
+        <button class="icon-btn del" title="Delete" data-delete="${t._id}">❌</button>
       </div>
     </div>`;
 		})
