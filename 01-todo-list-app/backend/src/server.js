@@ -8,7 +8,12 @@ const app = express();
 const port = process.env.PORT || 5500;
 
 app.use(express.json());
-app.use(cors());
+app.use(
+	cors({
+		origin: "https://inib-todo-app-frontend.vercel.app",
+		methods: ["GET", "POST", "PUT", "DELETE"],
+	}),
+);
 app.use("/api/tasks", taskRoutes);
 
 connectDB().then(() => {
