@@ -60,7 +60,7 @@ export const updateTask = async (req, res) => {
 				.json({ success: false, message: "Invalid request ID!" });
 		}
 
-		if (!title || !description || !completed || !dueDate) {
+		if (!title || !description || !dueDate) {
 			return res.status(400).json({
 				success: false,
 				message: "Please provide a field to update!",
